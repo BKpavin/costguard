@@ -1,0 +1,62 @@
+{
+  "format_version": "1.2",
+  "terraform_version": "1.7.5",
+  "resource_changes": [
+    {
+      "address": "azurerm_resource_group.rg",
+      "mode": "managed",
+      "type": "azurerm_resource_group",
+      "name": "rg",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "location": "eastus",
+          "name": "rg-costguard-prod"
+        }
+      }
+    },
+    {
+      "address": "azurerm_linux_virtual_machine.vm",
+      "mode": "managed",
+      "type": "azurerm_linux_virtual_machine",
+      "name": "vm",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "admin_username": "azureuser",
+          "location": "eastus",
+          "name": "vm-prod-app",
+          "size": "Standard_D2s_v3"
+        }
+      }
+    },
+    {
+      "address": "azurerm_managed_disk.data_disk",
+      "mode": "managed",
+      "type": "azurerm_managed_disk",
+      "name": "data_disk",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "create_option": "Empty",
+          "disk_size_gb": 128,
+          "location": "eastus",
+          "name": "disk-data-01",
+          "storage_account_type": "Premium_LRS"
+        }
+      }
+    }
+  ]
+}

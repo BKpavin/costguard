@@ -1,0 +1,28 @@
+{
+  "format_version": "1.2",
+  "terraform_version": "1.7.5",
+  "resource_changes": [
+    {
+      "address": "azurerm_linux_virtual_machine.db_vm",
+      "mode": "managed",
+      "type": "azurerm_linux_virtual_machine",
+      "name": "db_vm",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "update"
+        ],
+        "before": {
+          "location": "eastus",
+          "name": "vm-db-01",
+          "size": "Standard_B2s"
+        },
+        "after": {
+          "location": "eastus",
+          "name": "vm-db-01",
+          "size": "Standard_D4s_v3"
+        }
+      }
+    }
+  ]
+}

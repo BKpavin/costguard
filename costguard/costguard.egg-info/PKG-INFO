@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: costguard
+Version: 0.1.0
+Summary: Developer CLI tool to predict Azure infrastructure cost impact from Terraform plan JSON
+Author: CostGuard Team
+Requires-Python: >=3.11
+Requires-Dist: requests>=2.31.0
+Requires-Dist: rich>=13.7.0
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

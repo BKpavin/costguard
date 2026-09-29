@@ -1,0 +1,65 @@
+{
+  "format_version": "1.2",
+  "terraform_version": "1.7.5",
+  "resource_changes": [
+    {
+      "address": "random_string.suffix",
+      "mode": "managed",
+      "type": "random_string",
+      "name": "suffix",
+      "provider_name": "registry.terraform.io/hashicorp/random",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "length": 8,
+          "special": false
+        }
+      }
+    },
+    {
+      "address": "null_resource.cluster_init",
+      "mode": "managed",
+      "type": "null_resource",
+      "name": "cluster_init",
+      "provider_name": "registry.terraform.io/hashicorp/null",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "triggers": {
+            "cluster_id": "12345"
+          }
+        }
+      }
+    },
+    {
+      "address": "azurerm_resource_group.rg",
+      "mode": "managed",
+      "type": "azurerm_resource_group",
+      "name": "rg",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "update"
+        ],
+        "before": {
+          "location": "eastus",
+          "name": "rg-app",
+          "tags": {}
+        },
+        "after": {
+          "location": "eastus",
+          "name": "rg-app",
+          "tags": {
+            "Environment": "Production"
+          }
+        }
+      }
+    }
+  ]
+}
